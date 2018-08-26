@@ -54,6 +54,7 @@ else:
 # 변수 안에 바로 할당할 수 있는 표현식
 a = 'Good' if is_holiday else 'Bad'
 ```
+
 조건 표현식은 처음과 끝에 조건의 결과값이 들어간다고 생각하면 편하지 않을까?
 
 ## 중첩 조건표현식
@@ -67,6 +68,12 @@ is_workday = True
 
 a = 'Good' if is_holiday else 'Oh my god' if is_workday else 'Thank'
 ```
+
+`is_holiday` 가 참이면 'Good'를 반환하는데 거짓이라면 'Oh my god' 을 반환하는데 이 경우는 `is_workday` 가 참일 경우이다. 거짓이라면 'Thank'를 반환하라
+
+> 조건 표현식에서는 `elif`의 사용이 불가능하다.
+
+
 
 
 
