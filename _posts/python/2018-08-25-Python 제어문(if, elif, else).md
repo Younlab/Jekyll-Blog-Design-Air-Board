@@ -73,7 +73,3 @@ a = 'Good' if is_holiday else 'Oh my god' if is_workday else 'Thank'
 
 > 조건 표현식에서는 `elif`의 사용이 불가능하다.
 
-
-
-
-
