@@ -1,0 +1,75 @@
+<h1 id="제어문">제어문</h1>
+<h2 id="조건문-if-elif-else">조건문 (if, elif, else)</h2>
+<p>if 와 else는 조건이 참인지 거짓인지를 판단하는 선언문(Statement) 이며, elif는 else 내의 if를 중첩해야 할 때 사용한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. if, else</span>
+
+<span class="k">if</span> <span class="err">조건</span><span class="p">:</span>
+	<span class="err">조건이</span> <span class="err">참일</span> <span class="err">경우</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="err">조건이</span> <span class="err">거짓</span><span class="p">(</span><span class="err">위의</span> <span class="k">if</span> <span class="err">문을</span> <span class="err">통과하지</span> <span class="err">못했을</span> <span class="err">경우</span><span class="p">)</span><span class="err">일</span> <span class="err">경우</span>
+	
+<span class="c"># 2. if, elif</span>
+
+<span class="k">if</span> <span class="err">조건</span><span class="p">:</span>
+	<span class="err">조건이</span> <span class="err">참일</span> <span class="err">경우</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="err">조건이</span> <span class="err">거짓</span> <span class="err">일</span> <span class="err">경우</span>
+	<span class="k">if</span> <span class="err">조건</span><span class="mi">2</span><span class="p">:</span>
+		<span class="err">조건</span><span class="mi">1</span> <span class="err">은</span> <span class="err">거짓이나</span><span class="p">,</span> <span class="err">조건</span><span class="mi">2</span><span class="err">는</span> <span class="err">참일</span> <span class="err">경우</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="err">조건</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="err">가</span> <span class="err">모두</span> <span class="err">거짓일</span> <span class="err">경우</span>
+		
+<span class="c"># 위의 2번은 아래와같이 elif 를 사용하여 축약 할 수 있다.</span>
+
+<span class="k">if</span> <span class="err">조건</span><span class="p">:</span>
+	<span class="err">조건이</span> <span class="err">참일</span> <span class="err">경우</span>
+<span class="k">elif</span> <span class="err">조건</span><span class="mi">2</span><span class="p">:</span>
+	<span class="err">조건</span><span class="mi">1</span><span class="err">은</span> <span class="err">거짓이나</span> <span class="err">조건</span> <span class="mi">2</span><span class="err">는</span> <span class="err">참일</span> <span class="err">경우</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="err">조건</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="err">가</span> <span class="err">모두</span> <span class="err">거짓일</span> <span class="err">경우</span>
+</code></pre></div></div>
+
+<h2 id="조건표현식">조건표현식</h2>
+<p>조건표현식은 그 자체로 무엇인가를 return 해준다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">참일경우</span> <span class="k">if</span> <span class="err">조건식</span> <span class="k">else</span> <span class="err">거짓일</span> <span class="err">경우</span>
+</code></pre></div></div>
+<p>is_holiday 에 True 또는 False 값을 할당한 후, if 문과 조건표현식을 사용해서 각각 ‘Good’과 ‘Bad’를 출력하는 코드를 짜본다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># False 는 거짓</span>
+<span class="c"># True 는 진실</span>
+
+<span class="c"># 일반적인 if 문</span>
+
+<span class="n">is_holiday</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="k">if</span> <span class="n">is_holiday</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'Good'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'Bad'</span><span class="p">)</span>
+	
+<span class="c"># 변수 안에 바로 할당할 수 있는 표현식</span>
+<span class="n">a</span> <span class="o">=</span> <span class="s">'Good'</span> <span class="k">if</span> <span class="n">is_holiday</span> <span class="k">else</span> <span class="s">'Bad'</span>
+</code></pre></div></div>
+
+<p>조건 표현식은 처음과 끝에 조건의 결과값이 들어간다고 생각하면 편하지 않을까?</p>
+
+<h2 id="중첩-조건표현식">중첩 조건표현식</h2>
+<p>한 조건표현식 안에 여러개의 조건문이 들어가는 것을 중첩 조건표현식이라고 한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 단순히 조건1 이 거짓일 경우에 다른 if 문이 else 부분에 들어간다고 생각하면 편하다.</span>
+
+<span class="n">is_holiday</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">is_workday</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="s">'Good'</span> <span class="k">if</span> <span class="n">is_holiday</span> <span class="k">else</span> <span class="s">'Oh my god'</span> <span class="k">if</span> <span class="n">is_workday</span> <span class="k">else</span> <span class="s">'Thank'</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">is_holiday</code> 가 참이면 ‘Good’를 반환하는데 거짓이라면 ‘Oh my god’ 을 반환하는데 이 경우는 <code class="highlighter-rouge">is_workday</code> 가 참일 경우이다. 거짓이라면 ‘Thank’를 반환하라</p>
+
+<blockquote>
+  <p>조건 표현식에서는 <code class="highlighter-rouge">elif</code>의 사용이 불가능하다.</p>
+</blockquote>
+
+
+
