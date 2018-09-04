@@ -11,6 +11,7 @@ body > *:first-child {
   margin-top: 0 !important; }
 body > *:last-child {
   margin-bottom: 0 !important; }
+p{line-height: 1.8;}
 
 a {
   color: #4183C4; }
@@ -27,7 +28,7 @@ a.anchor {
   bottom: 0; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 10px;
+  margin: 32px 0 24px;
   padding: 0;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -62,6 +63,7 @@ h1 {
 
 h2 {
   font-size: 24px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #cccccc;
   color: black; }
 
@@ -259,7 +261,7 @@ pre code {
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
   font-size: 13px;
-  line-height: 19px;
+  line-height: 1.8;
   overflow: auto;
   padding: 6px 10px;
   border-radius: 2px; }
@@ -268,7 +270,7 @@ pre {
   background-color: #f8f8f8;
   border: 1px solid #cccccc;
   font-size: 13px;
-  line-height: 19px;
+  line-height: 1.8;
   overflow: auto;
   padding: 6px 10px;
   border-radius: 2px; }
