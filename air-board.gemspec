@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.name          = "air-board"
   spec.version       = "0.1.0"
   spec.authors       = ["Sehyeon Youn"]
-  spec.email         = ["dev.treebear@gmail.com"]
+  spec.email         = ["dev.younlab@gmail.com"]
 
   spec.summary       = "Light, easy-to-read dashboard"
   spec.homepage      = "https://devbear.net"

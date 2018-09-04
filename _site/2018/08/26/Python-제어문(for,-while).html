@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../sass/css/common_style.css">
+  <title>Jekyll-Blog-Design-Air-Board</title>
+</head>
+
+<body>
+
+  <!-- content start -->
+  <section class="floating_body">
+
+    <!-- side bar -->
+    <aside class="side_bar">
+      <header>
+        <a href="#" class="logo"><img src="../image/Younlab Development.svg" alt="Younlab"></a>
+      </header>
+
+      <!-- nav -->
+      <nav>
+        <ul>
+          <li><a href="">Display_manu01</a></li>
+          <li><a href="">Display_manu02</a></li>
+          <li><a href="">Display_manu03</a></li>
+          <li><a href="">Display_manu04</a></li>
+          <li><a href="">Display_manu05</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- main content -->
+    <section class="content_wrap">
+      <h1 id="제어문">제어문</h1>
+<h2 id="반복문-for-while">반복문 (for, while)</h2>
+<p>시퀀스형 데이터를 순회할 때 사용된다.</p>
+
+<h3 id="string-순회">String 순회</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="s">'ASDFASDF'</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+
+<span class="n">A</span>
+<span class="n">S</span>
+<span class="n">D</span>
+<span class="n">F</span>
+<span class="n">A</span>
+<span class="n">S</span>
+<span class="n">D</span>
+<span class="n">F</span>
+</code></pre></div></div>
+
+<h3 id="리스트-순회">리스트 순회</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s">'list01'</span><span class="p">,</span> <span class="s">'list02'</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+	
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="n">list01</span>
+<span class="n">list02</span>
+</code></pre></div></div>
+<p>i 는 순차적으로 리스트 내부에 있는 값을 할당받게 된다.</p>
+
+<p>리스트 내부에 또다른 리스트가 있을 경우 그 값을 순차적으로 출력하려면 for 문을 중첩하여 사용하면 된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">l</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">i</span><span class="p">:</span>
+    	<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+    
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+
+</code></pre></div></div>
+
+<h3 id="딕셔너리-순회">딕셔너리 순회</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fruits</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s">'apple'</span><span class="p">:</span><span class="s">'사과'</span><span class="p">,</span>
+	<span class="s">'banana'</span><span class="p">:</span><span class="s">'바나나'</span><span class="p">,</span>
+	<span class="s">'cherry'</span><span class="p">:</span><span class="s">'체리'</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+<span class="n">apple</span>
+<span class="n">banana</span>
+<span class="n">cherry</span>
+</code></pre></div></div>
+<p>딕셔너리를 그냥 출력하게 되면 key 값만 나온다. 위의 결과는 아래의 결과와 같다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">fruits</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+	
+<span class="n">apple</span>
+<span class="n">banana</span>
+<span class="n">cherry</span>
+</code></pre></div></div>
+
+<p>values 들을 출력하고 싶을 때는 위의 <code class="highlighter-rouge">keys()</code> 부분을 <code class="highlighter-rouge">values()</code> 로 바꾸어 주면 된다.</p>
+
+<p>for 문으로 key 값과 value 값을 전부 string 값을 출력하려면 아래와 같이 해보자</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">fruits</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'{item[0]}:{item[1]}'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="딕셔너리-안의-딕셔너리-안의-리스트-순회">딕셔너리 안의 딕셔너리 안의 리스트 순회</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 해당하는 딕셔너리를 아래의 결과값과 같이 출력해보자.</span>
+
+<span class="c"># 변수 생성</span>
+<span class="n">girlgroups</span> <span class="o">=</span> <span class="p">{</span>
+     <span class="s">'girlsday'</span><span class="p">:{</span>
+         <span class="s">'korean'</span><span class="p">:</span><span class="s">'걸스데이'</span><span class="p">,</span>
+         <span class="s">'members'</span><span class="p">:</span><span class="s">'민아,혜리,유라,소진'</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">),</span>
+     <span class="p">},</span>
+     <span class="s">'redvelvet'</span><span class="p">:{</span>
+         <span class="s">'korean'</span><span class="p">:</span><span class="s">'레드벨벳'</span><span class="p">,</span>
+         <span class="s">'members'</span><span class="p">:</span><span class="s">'아이린,슬기,웬디,조이,예리'</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">),</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c"># 해당 변수의 값</span>
+<span class="p">{</span><span class="s">'girlsday'</span><span class="p">:</span> <span class="p">{</span><span class="s">'korean'</span><span class="p">:</span> <span class="s">'걸스데이'</span><span class="p">,</span> <span class="s">'members'</span><span class="p">:</span> <span class="p">[</span><span class="s">'민아'</span><span class="p">,</span> <span class="s">'혜리'</span><span class="p">,</span> <span class="s">'유라'</span><span class="p">,</span> <span class="s">'소진'</span><span class="p">]},</span>
+ <span class="s">'redvelvet'</span><span class="p">:</span> <span class="p">{</span><span class="s">'korean'</span><span class="p">:</span> <span class="s">'레드벨벳'</span><span class="p">,</span> <span class="s">'members'</span><span class="p">:</span> <span class="p">[</span><span class="s">'아이린'</span><span class="p">,</span> <span class="s">'슬기'</span><span class="p">,</span> <span class="s">'웬디'</span><span class="p">,</span> <span class="s">'조이'</span><span class="p">,</span> <span class="s">'예리'</span><span class="p">]}}</span>
+
+<span class="c"># 출력 결과</span>
+<span class="err">민아</span>
+<span class="err">혜리</span>
+<span class="err">유라</span>
+<span class="err">소진</span>
+<span class="err">아이린</span>
+<span class="err">슬기</span>
+<span class="err">웬디</span>
+<span class="err">조이</span>
+<span class="err">예리</span>
+
+<span class="c"># 내 나름대로의 정답</span>
+<span class="k">for</span> <span class="n">gir</span> <span class="ow">in</span> <span class="n">girlgroups</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+	<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">gir</span><span class="p">[</span><span class="s">'members'</span><span class="p">]:</span>
+   		<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="break-continue">break, continue</h2>
+<h3 id="break">break</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="s">'민아'</span><span class="p">,</span> <span class="s">'혜리'</span><span class="p">,</span> <span class="s">'유라'</span><span class="p">,</span> <span class="s">'소진'</span><span class="p">,</span> <span class="s">'아이린'</span><span class="p">,</span> <span class="s">'슬기'</span><span class="p">,</span> <span class="s">'웬디'</span><span class="p">,</span> <span class="s">'조이'</span><span class="p">,</span> <span class="s">'예리'</span><span class="p">,]</span>
+
+<span class="k">for</span> <span class="n">members</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+		<span class="k">print</span><span class="p">(</span><span class="n">members</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">members</span> <span class="o">==</span> <span class="s">'소진'</span><span class="p">:</span>
+		<span class="k">print</span><span class="p">(</span><span class="s">'찾았다'</span><span class="p">)</span>
+		<span class="k">break</span>
+		
+<span class="err">민아</span>
+<span class="err">혜리</span>
+<span class="err">유라</span>
+<span class="err">소진</span>
+<span class="err">찾았다</span>
+</code></pre></div></div>
+<p>해당하는 조건에 일치하는 반복문을 중단하고 싶을때 사용한다.</p>
+
+<h3 id="continue">continue</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">members</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">members</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">members</span> <span class="o">==</span> <span class="s">'소진'</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">민아</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">혜리</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">유라</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">소진</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">아이린</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">슬기</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">웬디</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">조이</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="err">예리</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+</code></pre></div></div>
+<p>continue 가 사용되었을때 다음 순회로 넘어간다.</p>
+
+<h3 id="여러-시퀀스를-동시-순회">여러 시퀀스를 동시 순회</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># zip 을 사용하지 않고 동시 순회하라</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s">'apple'</span><span class="p">,</span> <span class="s">'banana'</span><span class="p">,</span> <span class="s">'melon'</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s">'red'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'green'</span><span class="p">,</span> <span class="s">'purple'</span><span class="p">]</span>
+ 
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fruits</span><span class="p">):</span>
+         <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'fruit:{fruit} color:{colors[index]}'</span><span class="p">)</span>
+
+<span class="n">fruit</span><span class="p">:</span><span class="n">apple</span> <span class="n">color</span><span class="p">:</span><span class="n">red</span>
+<span class="n">fruit</span><span class="p">:</span><span class="n">banana</span> <span class="n">color</span><span class="p">:</span><span class="n">yellow</span>
+<span class="n">fruit</span><span class="p">:</span><span class="n">melon</span> <span class="n">color</span><span class="p">:</span><span class="n">green</span>
+</code></pre></div></div>
+<p>enumerate로 순회인자인 fruit 의 index 값을 받아오고 출력할때 colors 리스트의 인덱스값을 같이 출력하도록 작성했다.</p>
+
+<h3 id="숫자-시퀀스-생성range">숫자 시퀀스 생성(range)</h3>
+<p>range() 함수는 특정 범위의 숫자 스트림 데이터를 반환한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+	<span class="n">pritn</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+	
+<span class="mi">1</span>
+<span class="mi">2</span>
+</code></pre></div></div>
+<p>해당하는 숫자를 입력하면 그만큼 순회한다.</p>
+
+<h2 id="while">while</h2>
+<p>for 문과 유사하나, while 뒤의 조건이 참일 경우에 계속해서 반복한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="err">조건</span><span class="p">:</span>
+	<span class="err">조건이</span> <span class="err">참일경우</span> <span class="err">실행</span>
+	<span class="err">조건이</span> <span class="err">거짓이</span> <span class="err">될</span> <span class="err">경우까지</span> <span class="err">계속해서</span> <span class="err">반복</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+	<span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+	
+<span class="mi">0</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+</code></pre></div></div>
+<p>count 값이 10이 되면 10 보다 값이 작지 않아서 순회를 멈춘다.</p>
+
+<h2 id="컴프리헨션comprehension">컴프리헨션(Comprehension)</h2>
+<p><img src="./image/리스트컴프리헨션.svg" alt="리스트컴프리헨션" /></p>
+
+<p>가독성에 문제가 없는 수준의 반복문(제어문) 일 경우 무조건 사용해주는것이 성능에 좋은 영향을 미친다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+	<span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+	
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></div>
+<p>위의 반복문을 리스트 컴프리헨션 식으로 변환하면</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)]</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+</code></pre></div></div>
+<p>와 같이 출력된다. 첫번째 같은 이름(item) 이 두개가 쓰였는데 첫번째에 있는 이름(item) 은 뒤의 반복되는 이름(item) 의 출력값(표현식) 이 된다.</p>
+
+<h3 id="if-문을-같이-활용하려면-어떻게">if 문을 같이 활용하려면 어떻게?</h3>
+<p><img src="./image/리스트컴프리헨션_if.svg" alt="리스트컴프리헨션_if" /></p>
+
+<p>반복된 리스트중 짝수만 출력하고싶다. 이럴때에 리스트컴프리헨션으로 어떻게 사용하면 될까?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="k">if</span> <span class="n">item</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</code></pre></div></div>
+<p>for 문에서 반복된 이름(item)을 if 문에서 제약조건을 걸어준다. 최종적으로 출력되는 표현식은 기존과 같이 첫번째 이름(item) 이다.</p>
+
+<blockquote>
+  <p>즉 결과가 앞에오고 과정이 뒤에 있다고 생각하자</p>
+</blockquote>
+
+<blockquote>
+  <p>리스트컴프리헨션을 2중첩 이상으로 사용하지 말자, 성능상으로 이득이 있는 것은 사실이지만 python 정의상 가독성을 매우 해친다.</p>
+</blockquote>
+
+<h2 id="실습">실습</h2>
+<blockquote>
+  <p>for문을 2개 중첩하여 (0,0), (0,1), (0,2), (0,3), (1,0), (1,1)……(6,3)까지 출력되는 반복문을 구현한다.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+	<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+   		<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'({i},{l})'</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>리스트컴프리헨션을 중첩하여 위 결과를 갖는 리스트를 생성한다.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">l</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+<span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>1, 2번의 반복문에서 1번은 튜플의 첫 번째 항목이 짝수일때만 출력하도록, 2번은 첫 번째 항목이 짝수일때만 리스트의 원소로 추가한다.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    	<span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    		<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'({i},{l})'</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">l</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+ <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>1000 에서 2000까지의 숫자 중, 홀수의 합을 구해본다.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sums</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2000</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+		<span class="n">sums</span> <span class="o">+=</span> <span class="n">i</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">sums</span><span class="p">)</span>
+<span class="mi">750000</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>리스트컴프리헨션을 사용하여 구구단 결과를 갖는 리스트를 만들고, 해당 리스트를 for 문을 사용해 구구단 형태로 나오도록 출력해본다. 각 단마다 한번더 줄바꿈을 넣어준다.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">multiplication_table</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="s">'{i} * {l} = {i*l}'</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">multiplication_table</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">index</span> <span class="o">%</span> <span class="mi">9</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    	<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'</span><span class="se">\n</span><span class="s">{index // 9 +2}단</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    
+<span class="mi">2</span><span class="err">단</span>
+
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="mi">2</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="mi">3</span><span class="err">단</span>
+
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="mi">3</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">27</span>
+
+<span class="mi">4</span><span class="err">단</span>
+
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">28</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="mi">4</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">36</span>
+
+<span class="mi">5</span><span class="err">단</span>
+
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="mi">5</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">45</span>
+
+<span class="mi">6</span><span class="err">단</span>
+
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">48</span>
+<span class="mi">6</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">54</span>
+
+<span class="mi">7</span><span class="err">단</span>
+
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">28</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">49</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">56</span>
+<span class="mi">7</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">63</span>
+
+<span class="mi">8</span><span class="err">단</span>
+
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">24</span>
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">40</span>
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">48</span>
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">56</span>
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="mi">8</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">72</span>
+
+<span class="mi">9</span><span class="err">단</span>
+
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">18</span>
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">6</span> <span class="o">=</span> <span class="mi">54</span>
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">7</span> <span class="o">=</span> <span class="mi">63</span>
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">8</span> <span class="o">=</span> <span class="mi">72</span>
+<span class="mi">9</span> <span class="o">*</span> <span class="mi">9</span> <span class="o">=</span> <span class="mi">81</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>1에서 99까지 정수 중, 7의 배수이거나 9의 배수인 정수인 리스트를 생성한다.</p>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">9</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+		
+<span class="p">[</span><span class="mi">7</span><span class="p">,</span>
+ <span class="mi">9</span><span class="p">,</span>
+ <span class="mi">14</span><span class="p">,</span>
+ <span class="mi">18</span><span class="p">,</span>
+ <span class="mi">21</span><span class="p">,</span>
+ <span class="mi">27</span><span class="p">,</span>
+ <span class="mi">28</span><span class="p">,</span>
+ <span class="mi">35</span><span class="p">,</span>
+ <span class="mi">36</span><span class="p">,</span>
+ <span class="mi">42</span><span class="p">,</span>
+ <span class="mi">45</span><span class="p">,</span>
+ <span class="mi">49</span><span class="p">,</span>
+ <span class="mi">54</span><span class="p">,</span>
+ <span class="mi">56</span><span class="p">,</span>
+ <span class="mi">63</span><span class="p">,</span>
+ <span class="mi">70</span><span class="p">,</span>
+ <span class="mi">72</span><span class="p">,</span>
+ <span class="mi">77</span><span class="p">,</span>
+ <span class="mi">81</span><span class="p">,</span>
+ <span class="mi">84</span><span class="p">,</span>
+ <span class="mi">90</span><span class="p">,</span>
+ <span class="mi">91</span><span class="p">,</span>
+ <span class="mi">98</span><span class="p">,</span>
+ <span class="mi">99</span><span class="p">,</span>
+ <span class="mi">7</span><span class="p">,</span>
+ <span class="mi">9</span><span class="p">,</span>
+ <span class="mi">14</span><span class="p">,</span>
+ <span class="mi">18</span><span class="p">,</span>
+ <span class="mi">21</span><span class="p">,</span>
+ <span class="mi">27</span><span class="p">,</span>
+ <span class="mi">28</span><span class="p">,</span>
+ <span class="mi">35</span><span class="p">,</span>
+ <span class="mi">36</span><span class="p">,</span>
+ <span class="mi">42</span><span class="p">,</span>
+ <span class="mi">45</span><span class="p">,</span>
+ <span class="mi">49</span><span class="p">,</span>
+ <span class="mi">54</span><span class="p">,</span>
+ <span class="mi">56</span><span class="p">,</span>
+ <span class="mi">63</span><span class="p">,</span>
+ <span class="mi">70</span><span class="p">,</span>
+ <span class="mi">72</span><span class="p">,</span>
+ <span class="mi">77</span><span class="p">,</span>
+ <span class="mi">81</span><span class="p">,</span>
+ <span class="mi">84</span><span class="p">,</span>
+ <span class="mi">90</span><span class="p">,</span>
+ <span class="mi">91</span><span class="p">,</span>
+ <span class="mi">98</span><span class="p">,</span>
+ <span class="mi">99</span><span class="p">]</span>
+</code></pre></div></div>
+
+
+    </section>
+
+  </section>
+  <!-- content end -->
+
+</body>
+
+</html>

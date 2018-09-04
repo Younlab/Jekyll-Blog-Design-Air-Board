@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../sass/css/common_style.css">
+  <title>Jekyll-Blog-Design-Air-Board</title>
+</head>
+
+<body>
+
+  <!-- content start -->
+  <section class="floating_body">
+
+    <!-- side bar -->
+    <aside class="side_bar">
+      <header>
+        <a href="#" class="logo"><img src="../image/Younlab Development.svg" alt="Younlab"></a>
+      </header>
+
+      <!-- nav -->
+      <nav>
+        <ul>
+          <li><a href="">Display_manu01</a></li>
+          <li><a href="">Display_manu02</a></li>
+          <li><a href="">Display_manu03</a></li>
+          <li><a href="">Display_manu04</a></li>
+          <li><a href="">Display_manu05</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- main content -->
+    <section class="content_wrap">
+      <h2 id="함수">함수</h2>
+
+<p>반복적인 작업을 하는 코드를 중복되지않게 재사용이 가능하도록 정의해놓은것으로 html/css를 배운 사람이라면 css의 id, class를 생각하셔도 좋다.</p>
+
+<h2 id="함수의-정의-방법">함수의 정의 방법</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="err">함수명(들어갈 매개변수):
+    동작할 기능
+</span></code></pre></div></div>
+
+<h2 id="함수의-실행">함수의 실행</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 실행시에 'hello world' 문구를 출력하는 함수 정의</span>
+<span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'hello world'</span><span class="p">)</span>
+
+<span class="c"># 함수를 불러옴</span>
+<span class="n">hello</span><span class="p">()</span>
+<span class="n">hello</span> <span class="n">world</span>
+</code></pre></div></div>
+<ul>
+  <li>불러올때는 함수명 옆에 ‘()’를 붙여주어야 실행된다.</li>
+  <li>’()’ 는 함수에 매개변수를 지정했을때 사용자 지정 값이 들어간다.</li>
+</ul>
+
+<h2 id="매개변수를-사용하는-함수의-정의법">매개변수를 사용하는 함수의 정의법</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_arguments</span><span class="p">(</span><span class="n">print_ar</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">print_ar</span><span class="p">)</span>
+
+<span class="n">print_arguments</span><span class="p">(</span><span class="s">'hello world'</span><span class="p">)</span>
+<span class="n">hello</span> <span class="n">world</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="highlighter-rouge">매개변수(parameter)</code> 함수를 정의할때 해당하는 값을 실행문에서 받는다.</li>
+  <li><code class="highlighter-rouge">인자(arguments)</code> 실행문에 값을 적어넣는다.</li>
+</ul>
+
+<h4 id="ex-매개변수를-두-개-받아-더한-값을-출력해주는-함수를-작성하고-5와-7을-인자로-전달해서-호출해-보기">EX) 매개변수를 두 개 받아 더한 값을 출력해주는 함수를 작성하고 5와 7을 인자로 전달해서 호출해 보기</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sum_two_values</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">sum_two_values</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+<span class="mi">12</span>
+</code></pre></div></div>
+<h2 id="위치-인자positional-arguments">위치 인자(Positional arguments)</h2>
+<p>매개변수의 순서대로 인자를 전달하여 사용하는 경우</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">student</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">gender</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span><span class="n">name</span><span class="p">,</span> <span class="s">'age'</span><span class="p">:</span><span class="n">age</span><span class="p">,</span><span class="s">'gender'</span><span class="p">:</span><span class="n">gender</span><span class="p">}</span>
+
+<span class="n">stundent</span><span class="p">(</span><span class="s">'Sehyeon Youn'</span><span class="p">,</span><span class="s">'25'</span><span class="p">,</span> <span class="s">'male'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="키워드-인자keyword-arguments">키워드 인자(Keyword arguments)</h2>
+<p>매개변수의 이름을 지정하여 인자로 전달하여 사용하는 경우</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">student</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'Sehyeon Youn'</span><span class="p">,</span> <span class="n">gender</span><span class="o">=</span><span class="s">'male'</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>위치인자와 키워드인자를 동시에 쓴다면, 위치인자가 먼저 와야 한다.</li>
+  <li>키워드 인자는 순서를 지키지 않아도 잘 찾아서 값이 들어간다.</li>
+</ul>
+
+<h2 id="기본-매개변수값-지정">기본 매개변수값 지정</h2>
+<p>인자가 제공되지 않을 경우, 기본 매개변수로 사용할 값을 지정할 수 있다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">student</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">gender</span><span class="p">,</span> <span class="n">cls</span><span class="o">=</span><span class="s">'a-class'</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s">'name'</span><span class="p">:</span><span class="n">name</span><span class="p">,</span> <span class="s">'age'</span><span class="p">:</span><span class="n">age</span><span class="p">,</span> <span class="s">'gender'</span><span class="p">:</span><span class="n">gender</span><span class="p">,</span> <span class="s">'class'</span><span class="p">:</span><span class="n">cls</span><span class="p">}</span>
+
+<span class="n">student</span><span class="p">(</span><span class="s">'Sehyeon Youn'</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="s">'male'</span><span class="p">)</span>
+<span class="p">{</span><span class="s">'name'</span><span class="p">:</span><span class="s">'Sehyeon Youn'</span><span class="p">,</span> <span class="s">'age'</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s">'gender'</span><span class="p">:</span><span class="s">'male'</span><span class="p">,</span><span class="s">'class'</span><span class="p">:</span><span class="s">'a-class'</span><span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>class 이름을 작성하지 않했을 때 사전 설정했던 값으로 불러온다.</li>
+</ul>
+
+<h2 id="기본-매개변수값의-정의-시점">기본 매개변수값의 정의 시점</h2>
+<p>기본 매개변수값은 함수가 실행될때마다 계산되지 않고, 함수가 정의되는 시점에서 계산된다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 빈 리스트 result 를 만들고 그 리스트에 value 값을 추가한다.</span>
+<span class="k">def</span> <span class="nf">return_list</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">result</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">return_list</span><span class="p">(</span><span class="s">'apple'</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'apple'</span><span class="p">]</span>
+<span class="n">return_list</span><span class="p">(</span><span class="s">'banana'</span><span class="p">)</span>
+<span class="p">[</span><span class="s">'apple'</span><span class="p">,</span> <span class="s">'banana'</span><span class="p">]</span>
+</code></pre></div></div>
+<p>함수가 실행되는 시점에 기본 매개변수값을 계산하기 위해, 아래와 같이 수정해준다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 같은 리스트를 가지고 있는것이 있다면 초기화하고 다시 정의한다.</span>
+<span class="k">def</span> <span class="nf">return_list</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">result</span><span class="o">=</span><span class="p">[]):</span>
+    <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span>
+</code></pre></div></div>
+
+<h2 id="위치인자-묶음">위치인자 묶음</h2>
+<p>함수에 위치인자로 주어진 변수들의 묶음은 <code class="highlighter-rouge">*매개변수명</code> 으로 사용할 수 있다. 관용적으로 <code class="highlighter-rouge">*args</code> 를 사용한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>여러개의 정의되어 있지 않은 변수를 사용할 수 있개한다.</li>
+  <li>tuple 데이터 타입으로 출력한다.
+    <h2 id="키워드인자-묶음">키워드인자 묶음</h2>
+    <p>함수에 키워드인자로 주어진 변수들의 묶음은 <code class="highlighter-rouge">**매개변수명</code> 으로 사용할 수 있다. 관용적으로 <code class="highlighter-rouge">**kwargs</code> 를 사용한다.</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_kwargs</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>딕셔너리 데이터 타입으로 출력된다.</li>
+</ul>
+
+<h2 id="docstring">docstring</h2>
+<p>함수를 정의한 문서 역할을 한다.
+함수 정의 후, 몸체의 시작부분에 문자열로 작상하며, 여러줄 작성도 가능하다. 즉 주석의 기능을 사용 할 수 있다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="s">'print positional arguments'</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">print_args</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="highlighter-rouge">help()</code> 로 주석을 호출 할 수 있다.</li>
+</ul>
+
+<h2 id="함수를-인자로-전달">함수를 인자로 전달</h2>
+<p>파이썬에서는 함수 역시 다른 객체와 동등하게 취급되므로, 함수에서 인자로 함수를 전달, 실행, 리턴하 형태로 프로그래밍이 가능하다.</p>
+
+<p>-‘call func’를 출력하는 함수를 정의하고, 함수를 인자로 받아 실행하는 함수를 정의하여 첫번째에 정의한 함수를 인자로 전댈해 실행해보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. 'call function!' 을 출력하는 함수 call_function을 정의</span>
+<span class="c"># 2. f를 매개변수로 받는 execute_function(f)를 정의하고 매개변수로 받은 f를 실행하도록 함</span>
+<span class="c"># 3. execute_function에 call_function(함수자체)를 전달해서 해당함수를 실행한다.</span>
+
+<span class="k">def</span>  <span class="nf">call_functioncall_fun</span> <span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'call function!'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">execute_function</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="n">f</span><span class="p">()</span>
+
+<span class="n">execute_function</span><span class="p">(</span><span class="n">call_function</span><span class="p">)</span>
+<span class="n">call</span> <span class="n">function</span><span class="err">!</span>
+</code></pre></div></div>
+
+<h2 id="내부함수">내부함수</h2>
+<p>함수 안에서 또다른 함수를 정의해 사용할 수 있다.</p>
+<ul>
+  <li>문자열 인자를 하나 전달받는 함수를 만들고, 해당 함수 내부에 전달받은 문자열을 대문자화해서 리턴해주는 내부함수를 구현한다. 문자열을 전달받는 함수는 내부함수를 실행한 결과를 리턴하도록 한다.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1. 문자열 인자를 하나 전달받는 함수 def upper정의</span>
+<span class="c"># 2. upper 함수내에 또 다른 함수인 execute를 정의</span>
+<span class="c">#    execute 가 하는 일은 하나의 문자열을 받아 대문자화해서 리턴해줌</span>
+<span class="c"># 3. upper 함수는 자신의 내부에 있는 함수 'execute'를 실헹하고 그 결과를 리턴해준다.</span>
+<span class="k">def</span> <span class="nf">upper</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">caps</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">caps</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">execute</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="스코프인자">스코프인자</h2>
+<p>파이썬에서는 코드 작성시, 각 함수마다 독립적인 영역을 가진다.
+메인프로그램(현재 동작하는 프로그램의 최상위 위치)의 영역은 전역영역(Global Scope)라고 하며, 전역스코프 내부에서 독립적인 영역을 가지고 있는 경우에는 지역영역(Local Scope)라고 부른다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">champion</span> <span class="o">=</span> <span class="s">'Lux'</span>
+    <span class="k">def</span> <span class="nf">show_global_champion</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'show_global_champion : {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">champion</span><span class="p">))</span>
+
+<span class="n">show_global_champion</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'print shampion : {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">champion</span><span class="p">))</span>
+</code></pre></div></div>
+<p>위 코드를 아래와 같이 변경후, 실행해보자</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">champion</span> <span class="o">=</span> <span class="s">'Lux'</span>
+
+<span class="k">def</span> <span class="nf">show_global_champion</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'show_global_champion : {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">champion</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">change_global_champion</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'before change_global_champion : {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">champion</span><span class="p">))</span>
+    <span class="n">champion</span> <span class="o">=</span> <span class="s">'Ahri'</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'after change_global_champion : {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">champion</span><span class="p">))</span>
+
+<span class="n">show_global_champion</span><span class="p">()</span>
+<span class="n">change_global_champion</span><span class="p">()</span>
+</code></pre></div></div>
+<p>오류가 난다.</p>
+<blockquote>
+  <p>함수는 독립적인 영역을 가진다. 두번째로 정의한 함수 내부에 <code class="highlighter-rouge">champion</code> 이라는 변수를 ‘Lux’에서 ‘Ahri’로 변경한걸 볼 수 있다. 오류는 여기서 변경전에 정의한 ‘print’문에서 볼 수 있는데, 지역영역에서 같은 이름의 변수를 선언했다면 그 이름을 가진 변수를 함수가 호출할때 지역영역에서 우선적으로 호출한다. 그런데 두번째 함수는 지역영역에 변수를 선언하기는 했으나 선언하기에 앞서서 ‘print’ 문으로 변수를 호출했기 때문에 ‘print’함수가 <code class="highlighter-rouge">champin</code> 변수를 찾을수 없어 오류가 난 것이다.</p>
+</blockquote>
+
+<h2 id="스코핑-룰">스코핑 룰</h2>
+<p>스코프는 지역(Local), 전역(Global)외에도 내장(Built-in)영역이 존재하며, 내장영역이 가장 바깥, 그 내부에 전역, 그 내부에 지역 순으로 정의된다.
+분리된 영역에서, 외부영역에서는 내부 영역의 데이터를 사용할 수 없지만 내부 영역에서는 자신의 외부 영역에있는 데이터를 참조할 수 있다.</p>
+
+<p>즉 함수 내부에 정의한 변수는 함수 외부에서 참조 할 수 없고 함수 외부에 정의한 변수는 새로운 함수를 정의했을때 외부에 있는 데이터를 참조해서 가져올 수 있다는 말이다.</p>
+
+<h2 id="실습-01">실습 01</h2>
+<p>매개변수로 문자열을 받고, 해당 문자열이 red면 apple을, yellow면 banana를, green이면 melon을, 어떤 경우도 아닐 경우 I don’t know를 리턴하는 함수를 정의하고, 사용하여 result변수에 결과를 할당하고 print해본다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">flut</span><span class="p">(</span><span class="n">fu</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">fu</span> <span class="o">==</span> <span class="s">'red'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'apple'</span>
+    <span class="k">elif</span> <span class="n">fu</span> <span class="o">==</span> <span class="s">'yellow'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'banana'</span>
+    <span class="k">elif</span> <span class="n">fu</span> <span class="o">==</span> <span class="s">'green'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'melon'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">"i don't know"</span>
+    <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fu</span><span class="p">)</span>
+
+<span class="n">flut</span><span class="p">(</span><span class="s">'red'</span><span class="p">)</span>
+<span class="s">'apple'</span>
+<span class="n">flut</span><span class="p">(</span><span class="s">'yellow'</span><span class="p">)</span>
+<span class="s">'banana'</span>
+<span class="n">flut</span><span class="p">(</span><span class="s">'green'</span><span class="p">)</span>
+<span class="s">'melon'</span>
+<span class="n">flut</span><span class="p">(</span><span class="s">'as'</span><span class="p">)</span>
+<span class="s">"i don't know"</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 1번 최선의 방법</span>
+<span class="n">fruit_dict</span> <span class="o">=</span><span class="p">{</span>
+    <span class="s">'red'</span><span class="p">:</span><span class="s">'apple'</span><span class="p">,</span>
+    <span class="s">'yellow'</span><span class="p">:</span><span class="s">'apple'</span><span class="p">,</span>
+    <span class="s">'green'</span><span class="p">:</span><span class="s">'melon'</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">what_fruit2</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">fruit_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">color</span><span class="p">,</span><span class="s">"i don't know"</span><span class="p">)</span>
+</code></pre></div></div>
+<p><code class="highlighter-rouge">.get</code> 내장함수는 기본값을 줄수 있고, 기본값을 작성하지 않았을때에는 <code class="highlighter-rouge">none</code> 값이 출력된다.</p>
+<h2 id="실습-02">실습 02</h2>
+<p>1번에서 작성한 함수에 docstring을 작성하여 함수에 대한 설명을 달아보고, help(함수명)으로 해당 설명을 출력해본다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">flut</span><span class="p">(</span><span class="n">fu</span><span class="p">):</span>
+    <span class="s">'이 함수는 색에 맞는 과일을 return합니다.'</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="n">fu</span> <span class="o">==</span> <span class="s">'red'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'apple'</span>
+    <span class="k">elif</span> <span class="n">fu</span> <span class="o">==</span> <span class="s">'yellow'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'banana'</span>
+    <span class="k">elif</span> <span class="n">fu</span> <span class="o">==</span> <span class="s">'green'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">'melon'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s">"i don't know"</span>
+    <span class="k">return</span> <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fu</span><span class="p">)</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">flut</span>
+  <span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">flut</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
+
+<span class="n">flut</span><span class="p">(</span><span class="n">fu</span><span class="p">)</span>
+<span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">flut</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
+
+<span class="n">flut</span><span class="p">(</span><span class="n">fu</span><span class="p">)</span>
+<span class="err">이</span> <span class="err">함수는</span> <span class="err">색에</span> <span class="err">맞는</span> <span class="err">과일을</span> <span class="k">return</span><span class="err">합니다</span><span class="o">.</span>
+</code></pre></div></div>
+
+<h2 id="실습-03">실습 03</h2>
+<p>한 개 또는 두 개의 숫자 인자를 전달받아, 하나가 오면 제곱, 두개를 받으면 두 수의 곱을 반환해주는 함수를 정의하고 사용해본다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+
+<span class="c">#1. 매개변수 중 1개에 기본값을 지정</span>
+<span class="c">#2. 위치인자 묶음을 사용</span>
+
+<span class="c"># None를 boolean 판단기준으로 사용</span>
+<span class="c"># if문에 해당할 경우 함수가 return되므로 else생략</span>
+<span class="k">def</span> <span class="nf">square_or_multi_default_parmeter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">y</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">x</span>
+
+<span class="c"># 조건표현식을 사용해 한줄로 처리</span>
+<span class="k">def</span> <span class="nf">square_or_multi_positional_parmeter2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="k">if</span> <span class="n">y</span> <span class="k">else</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c"># 위치인자묶음</span>
+<span class="k">def</span> <span class="nf">square_or_multi_positional_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">args_length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="c"># 위치인자가 1개나 2개가 아닌 경우</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">args_lenght</span> <span class="o">==</span><span class="mi">1</span> <span class="ow">or</span> <span class="n">args_length</span> <span class="o">==</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">'숫자는 1개 또는 2개만 입력해주세요'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c"># 위치인자 묶음을 튜플 언패킹으로 사용</span>
+<span class="k">def</span> <span class="nf">square_or_multi_positional_args</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="c"># 튜플 언패킹시 좌, 우변 모두 'tuple'형태로 만들어야함</span>
+        <span class="n">argl</span><span class="p">,</span> <span class="o">=</span> <span class="n">args</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span><span class="mi">2</span><span class="p">:</span>
+        <span class="n">argl</span><span class="p">,</span> <span class="n">arg2</span> <span class="o">==</span> <span class="n">args</span>
+    <span class="c"># if문에따라 달라진 locals() dict에서</span>
+    <span class="c">#'args'키가 있는지 여부로 리턴할 값을 반환</span>
+    <span class="k">if</span> <span class="s">'arg2'</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">arg1</span> <span class="o">*</span> <span class="n">arg2</span>
+    <span class="k">return</span> <span class="n">arg1</span> <span class="o">**</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<h2 id="실습04">실습04</h2>
+<p>두 개의 숫자를 인자로 받아 합과 차를 튜플을 이용해 동시에 반환하는 함수를 정의하고 사용해본다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sum_sub</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+  <span class="c"># abs 절대값. 차가 - 일경우 절대값으로 리턴한다.</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">))</span>
+
+</code></pre></div></div>
+
+<h2 id="실습05">실습05</h2>
+<p>위치인자 묶음을 매개변수로 가지며, 위치인자가 몇 개 전달되었는지를 print하고 개수를 리턴해주는 함수를 정의하고 사용해본다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_args_num</span><span class="p">(</span><span class="o">*</span><span class="n">atgs</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'위치인자는 총 {len(args)}개가 전달되었습니다.'</span><span class="p">)</span>
+  <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+  <span class="n">result</span> <span class="o">=</span> <span class="n">get_args_num</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="실습06">실습06</h2>
+<p>람다함수와 리스트 컴프리헨션을 사용해 한 줄로 구구단의 결과를 갖는 리스트를 생성해본다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">f</span><span class="s">'{x} * {y} = {x * y}'</span><span class="p">)(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)]</span>
+
+<span class="p">[</span><span class="s">'2 * 1 = 2'</span><span class="p">,</span>
+ <span class="s">'2 * 2 = 4'</span><span class="p">,</span>
+ <span class="s">'2 * 3 = 6'</span><span class="p">,</span>
+ <span class="s">'2 * 4 = 8'</span><span class="p">,</span>
+ <span class="s">'2 * 5 = 10'</span><span class="p">,</span>
+ <span class="s">'2 * 6 = 12'</span><span class="p">,</span>
+ <span class="s">'2 * 7 = 14'</span><span class="p">,</span>
+ <span class="s">'2 * 8 = 16'</span><span class="p">,</span>
+ <span class="s">'2 * 9 = 18'</span><span class="p">,</span>
+ <span class="s">'3 * 1 = 3'</span><span class="p">,</span>
+ <span class="s">'3 * 2 = 6'</span><span class="p">,</span>
+ <span class="s">'3 * 3 = 9'</span><span class="p">,</span>
+ <span class="s">'3 * 4 = 12'</span><span class="p">,</span>
+ <span class="s">'3 * 5 = 15'</span><span class="p">,</span>
+ <span class="s">'3 * 6 = 18'</span><span class="p">,</span>
+ <span class="s">'3 * 7 = 21'</span><span class="p">,</span>
+ <span class="s">'3 * 8 = 24'</span><span class="p">,</span>
+ <span class="s">'3 * 9 = 27'</span><span class="p">,</span>
+ <span class="s">'4 * 1 = 4'</span><span class="p">,</span>
+ <span class="s">'4 * 2 = 8'</span><span class="p">,</span>
+ <span class="s">'4 * 3 = 12'</span><span class="p">,</span>
+ <span class="s">'4 * 4 = 16'</span><span class="p">,</span>
+ <span class="s">'4 * 5 = 20'</span><span class="p">,</span>
+ <span class="s">'4 * 6 = 24'</span><span class="p">,</span>
+ <span class="s">'4 * 7 = 28'</span><span class="p">,</span>
+ <span class="s">'4 * 8 = 32'</span><span class="p">,</span>
+ <span class="s">'4 * 9 = 36'</span><span class="p">,</span>
+ <span class="s">'5 * 1 = 5'</span><span class="p">,</span>
+ <span class="s">'5 * 2 = 10'</span><span class="p">,</span>
+ <span class="s">'5 * 3 = 15'</span><span class="p">,</span>
+ <span class="s">'5 * 4 = 20'</span><span class="p">,</span>
+ <span class="s">'5 * 5 = 25'</span><span class="p">,</span>
+ <span class="s">'5 * 6 = 30'</span><span class="p">,</span>
+ <span class="s">'5 * 7 = 35'</span><span class="p">,</span>
+ <span class="s">'5 * 8 = 40'</span><span class="p">,</span>
+ <span class="s">'5 * 9 = 45'</span><span class="p">,</span>
+ <span class="s">'6 * 1 = 6'</span><span class="p">,</span>
+ <span class="s">'6 * 2 = 12'</span><span class="p">,</span>
+ <span class="s">'6 * 3 = 18'</span><span class="p">,</span>
+ <span class="s">'6 * 4 = 24'</span><span class="p">,</span>
+ <span class="s">'6 * 5 = 30'</span><span class="p">,</span>
+ <span class="s">'6 * 6 = 36'</span><span class="p">,</span>
+ <span class="s">'6 * 7 = 42'</span><span class="p">,</span>
+ <span class="s">'6 * 8 = 48'</span><span class="p">,</span>
+ <span class="s">'6 * 9 = 54'</span><span class="p">,</span>
+ <span class="s">'7 * 1 = 7'</span><span class="p">,</span>
+ <span class="s">'7 * 2 = 14'</span><span class="p">,</span>
+ <span class="s">'7 * 3 = 21'</span><span class="p">,</span>
+ <span class="s">'7 * 4 = 28'</span><span class="p">,</span>
+ <span class="s">'7 * 5 = 35'</span><span class="p">,</span>
+ <span class="s">'7 * 6 = 42'</span><span class="p">,</span>
+ <span class="s">'7 * 7 = 49'</span><span class="p">,</span>
+ <span class="s">'7 * 8 = 56'</span><span class="p">,</span>
+ <span class="s">'7 * 9 = 63'</span><span class="p">,</span>
+ <span class="s">'8 * 1 = 8'</span><span class="p">,</span>
+ <span class="s">'8 * 2 = 16'</span><span class="p">,</span>
+ <span class="s">'8 * 3 = 24'</span><span class="p">,</span>
+ <span class="s">'8 * 4 = 32'</span><span class="p">,</span>
+ <span class="s">'8 * 5 = 40'</span><span class="p">,</span>
+ <span class="s">'8 * 6 = 48'</span><span class="p">,</span>
+ <span class="s">'8 * 7 = 56'</span><span class="p">,</span>
+ <span class="s">'8 * 8 = 64'</span><span class="p">,</span>
+ <span class="s">'8 * 9 = 72'</span><span class="p">,</span>
+ <span class="s">'9 * 1 = 9'</span><span class="p">,</span>
+ <span class="s">'9 * 2 = 18'</span><span class="p">,</span>
+ <span class="s">'9 * 3 = 27'</span><span class="p">,</span>
+ <span class="s">'9 * 4 = 36'</span><span class="p">,</span>
+ <span class="s">'9 * 5 = 45'</span><span class="p">,</span>
+ <span class="s">'9 * 6 = 54'</span><span class="p">,</span>
+ <span class="s">'9 * 7 = 63'</span><span class="p">,</span>
+ <span class="s">'9 * 8 = 72'</span><span class="p">,</span>
+ <span class="s">'9 * 9 = 81'</span><span class="p">]</span>
+</code></pre></div></div>
+
+
+    </section>
+
+  </section>
+  <!-- content end -->
+
+</body>
+
+</html>

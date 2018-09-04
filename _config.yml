@@ -1,0 +1,26 @@
+locale: "ko"
+title: Re:
+email: dev.younlab@gmail.com
+url: "https://younlab.github.io"
+repository: "https://github.com/Younlab?tab=repositories"
+
+# paging
+gems: [jekyll-paginate]
+
+paginate: 5
+paginate_path: "/paging/page:num/"
+gems:
+  - jekyll-paginate
+
+# Jekyll
+permalink: /:title/
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-gist
+
+# paging
+gems: [jekyll-paginate]
+category_dir: category/
