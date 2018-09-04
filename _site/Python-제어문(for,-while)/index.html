@@ -7,6 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../sass/css/common_style.css">
   <link rel="stylesheet" href="../sass/css/markdown.css">
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <title>Younlab Development</title>
 </head>
 
@@ -58,7 +62,7 @@
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
 	<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-	
+
 <span class="mi">1</span>
 <span class="mi">2</span>
 <span class="mi">3</span>
@@ -81,7 +85,7 @@
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">i</span><span class="p">:</span>
     	<span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
-    
+
 <span class="mi">1</span>
 <span class="mi">2</span>
 <span class="mi">3</span>
@@ -112,7 +116,7 @@
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">fruits</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
 	<span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-	
+
 <span class="n">apple</span>
 <span class="n">banana</span>
 <span class="n">cherry</span>
@@ -171,7 +175,7 @@
 	<span class="k">if</span> <span class="n">members</span> <span class="o">==</span> <span class="s">'소진'</span><span class="p">:</span>
 		<span class="k">print</span><span class="p">(</span><span class="s">'찾았다'</span><span class="p">)</span>
 		<span class="k">break</span>
-		
+
 <span class="err">민아</span>
 <span class="err">혜리</span>
 <span class="err">유라</span>
@@ -240,7 +244,7 @@
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># zip 을 사용하지 않고 동시 순회하라</span>
 <span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s">'apple'</span><span class="p">,</span> <span class="s">'banana'</span><span class="p">,</span> <span class="s">'melon'</span><span class="p">]</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s">'red'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'green'</span><span class="p">,</span> <span class="s">'purple'</span><span class="p">]</span>
- 
+
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fruits</span><span class="p">):</span>
          <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'fruit:{fruit} color:{colors[index]}'</span><span class="p">)</span>
 
@@ -257,7 +261,7 @@
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 	<span class="n">pritn</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-	
+
 <span class="mi">1</span>
 <span class="mi">2</span>
 </code></pre></div></div>
@@ -274,7 +278,7 @@
 <span class="k">while</span> <span class="n">count</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
 	<span class="k">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
 	<span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-	
+
 <span class="mi">0</span>
 <span class="mi">1</span>
 <span class="mi">2</span>
@@ -289,14 +293,14 @@
 <p>count 값이 10이 되면 10 보다 값이 작지 않아서 순회를 멈춘다.</p>
 
 <h2 id="컴프리헨션comprehension">컴프리헨션(Comprehension)</h2>
-<p><img src="./image/리스트컴프리헨션.svg" alt="리스트컴프리헨션" /></p>
+<p><img src="../image/리스트컴프리헨션.svg" alt="리스트컴프리헨션" /></p>
 
 <p>가독성에 문제가 없는 수준의 반복문(제어문) 일 경우 무조건 사용해주는것이 성능에 좋은 영향을 미친다.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
 	<span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-	
+
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </code></pre></div></div>
 <p>위의 반복문을 리스트 컴프리헨션 식으로 변환하면</p>
@@ -307,7 +311,7 @@
 <p>와 같이 출력된다. 첫번째 같은 이름(item) 이 두개가 쓰였는데 첫번째에 있는 이름(item) 은 뒤의 반복되는 이름(item) 의 출력값(표현식) 이 된다.</p>
 
 <h3 id="if-문을-같이-활용하려면-어떻게">if 문을 같이 활용하려면 어떻게?</h3>
-<p><img src="./image/리스트컴프리헨션_if.svg" alt="리스트컴프리헨션_if" /></p>
+<p><img src="../image/리스트컴프리헨션_if.svg" alt="리스트컴프리헨션_if" /></p>
 
 <p>반복된 리스트중 짝수만 출력하고싶다. 이럴때에 리스트컴프리헨션으로 어떻게 사용하면 될까?</p>
 
@@ -463,7 +467,7 @@
     <span class="k">if</span> <span class="n">index</span> <span class="o">%</span> <span class="mi">9</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     	<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">'</span><span class="se">\n</span><span class="s">{index // 9 +2}단</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    
+
 <span class="mi">2</span><span class="err">단</span>
 
 <span class="mi">2</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">2</span>
@@ -569,7 +573,7 @@
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">99</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
 	<span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">9</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 		<span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-		
+
 <span class="p">[</span><span class="mi">7</span><span class="p">,</span>
  <span class="mi">9</span><span class="p">,</span>
  <span class="mi">14</span><span class="p">,</span>

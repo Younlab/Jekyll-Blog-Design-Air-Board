@@ -23,7 +23,7 @@ l = [1, 2, 3, 4, 5, 6, 'list01', 'list02']
 
 for i in l:
 	print(i)
-	
+
 1
 2
 3
@@ -47,7 +47,7 @@ l = [
 for i in l:
     for e in i:
     	print(e)
-    
+
 1
 2
 3
@@ -81,7 +81,7 @@ cherry
 ```python
 for item in fruits.keys():
 	print(item)
-	
+
 apple
 banana
 cherry
@@ -143,7 +143,7 @@ for members in result:
 	if members == '소진':
 		print('찾았다')
 		break
-		
+
 민아
 혜리
 유라
@@ -214,7 +214,7 @@ continue 가 사용되었을때 다음 순회로 넘어간다.
 # zip 을 사용하지 않고 동시 순회하라
 fruits = ['apple', 'banana', 'melon']
 colors = ['red', 'yellow', 'green', 'purple']
- 
+
 for index, fruit in enumerate(fruits):
          print(f'fruit:{fruit} color:{colors[index]}')
 
@@ -232,7 +232,7 @@ range(start, stop, step)
 
 for i in range(2)
 	pritn(i)
-	
+
 1
 2
 ```
@@ -251,7 +251,7 @@ count = 0
 while count < 10:
 	print(count)
 	count += 1
-	
+
 0
 1
 2
@@ -267,7 +267,7 @@ count 값이 10이 되면 10 보다 값이 작지 않아서 순회를 멈춘다.
 
 
 ## 컴프리헨션(Comprehension)
-![리스트컴프리헨션](./image/리스트컴프리헨션.svg)
+![리스트컴프리헨션](../image/리스트컴프리헨션.svg)
 
 가독성에 문제가 없는 수준의 반복문(제어문) 일 경우 무조건 사용해주는것이 성능에 좋은 영향을 미친다.
 
@@ -275,7 +275,7 @@ count 값이 10이 되면 10 보다 값이 작지 않아서 순회를 멈춘다.
 numbers = []
 for item in range(1, 6):
 	numbers.append(item)
-	
+
 [1, 2, 3, 4, 5]
 ```
 위의 반복문을 리스트 컴프리헨션 식으로 변환하면
@@ -287,7 +287,7 @@ for item in range(1, 6):
 와 같이 출력된다. 첫번째 같은 이름(item) 이 두개가 쓰였는데 첫번째에 있는 이름(item) 은 뒤의 반복되는 이름(item) 의 출력값(표현식) 이 된다.
 
 ### if 문을 같이 활용하려면 어떻게?
-![리스트컴프리헨션_if](./image/리스트컴프리헨션_if.svg)
+![리스트컴프리헨션_if](../image/리스트컴프리헨션_if.svg)
 
 반복된 리스트중 짝수만 출력하고싶다. 이럴때에 리스트컴프리헨션으로 어떻게 사용하면 될까?
 
@@ -435,7 +435,7 @@ for index, i in enumerate(multiplication_table):
     if index % 9 == 0:
     	print(f'\n{index // 9 +2}단\n')
     print(i)
-    
+
 2단
 
 2 * 1 = 2
@@ -540,7 +540,7 @@ result = []
 for i in range(1, 99+1):
 	if i % 7 == 0 or i % 9 == 0:
 		result.append(i)
-		
+
 [7,
  9,
  14,

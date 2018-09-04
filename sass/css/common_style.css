@@ -13,12 +13,6 @@ html {
   font-weight: 200px;
 }
 
-li,
-ol,
-ul {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -75,6 +69,12 @@ body {
 .side_bar nav {
   width: 150px;
   margin: 0 auto;
+}
+
+.side_bar nav li,
+.side_bar nav ol,
+.side_bar nav ul {
+  list-style: none;
 }
 
 .side_bar nav ul > li {

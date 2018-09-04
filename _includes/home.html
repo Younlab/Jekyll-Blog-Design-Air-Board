@@ -1,7 +1,8 @@
 {% for post in site.posts %}
-<a href="{{post.url}}">
+<a class="post_wrap" href="{{post.url}}">
   <div>
-    <h4>{{ post.title }}</h4>
+    <h4 class="post_title">{{ post.title }}</h4>
+    <p class="post_description">{{ post.content | strip_html | truncate: 60 }}</p>
   </div>
 </a>
 {% endfor %}
