@@ -1,4 +1,3 @@
-@import "https://fonts.googleapis.com/css?family=Roboto";
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +9,7 @@ html {
   height: 100%;
   background: #F3F4F6;
   overflow: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: Helvetica, arial, sans-serif;
   font-weight: 200px;
 }
 
@@ -32,6 +31,7 @@ body {
 .floating_body {
   max-width: 1140px;
   max-height: 640px;
+  position: relative;
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -46,9 +46,10 @@ body {
 .logo {
   display: block;
   width: 100%;
-  height: 48px;
-  padding: 16px 0;
+  height: 56px;
+  padding: 20px 0;
   box-sizing: border-box;
+  background: #999999;
 }
 
 .logo img {
@@ -57,13 +58,16 @@ body {
   margin: 0 auto;
 }
 
-.content,
+.content_wrap,
 .side_bar {
   box-sizing: border-box;
 }
 
 .side_bar {
-  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22%;
   height: 100%;
   background: #ddd;
 }
@@ -83,7 +87,13 @@ body {
 }
 
 .content_wrap {
-  width: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 78%;
+  height: 100%;
+  overflow-y: scroll;
   background: #fff;
   padding: 0 32px;
+  padding-top: 16px;
 }
