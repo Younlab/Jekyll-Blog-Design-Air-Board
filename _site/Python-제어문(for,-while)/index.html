@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -7,39 +7,41 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../sass/css/common_style.css">
   <link rel="stylesheet" href="../sass/css/markdown.css">
-  <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  <title>Younlab Development</title>
+  <title>Document</title>
 </head>
 
 <body>
 
-  <!-- content start -->
-  <section class="floating_body">
+  <aside class="side-bar">
+    <a href="http://localhost:4000" class="logo">
+      <img src="../image/logo_Younlab.svg" alt="">
+    </a>
+    <nav class="nav-wrap">
+      <ul>
+        <li><a href="">Python</a></li>
+        <li><a href="">TIL</a></li>
+        <li><a href="">Settings</a></li>
 
-    <!-- side bar -->
-    <aside class="side_bar">
-      <header>
-        <a href="#" class="logo"><img src="../image/Younlab Development.svg" alt="Younlab"></a>
-      </header>
+      </ul>
+    </nav>
+  </aside>
 
-      <!-- nav -->
-      <nav>
-        <ul>
-          <li><a href="">Display_manu01</a></li>
-          <li><a href="">Display_manu02</a></li>
-          <li><a href="">Display_manu03</a></li>
-          <li><a href="">Display_manu04</a></li>
-          <li><a href="">Display_manu05</a></li>
-        </ul>
-      </nav>
-    </aside>
+  <section class="content-wrap">
 
-    <!-- main content -->
-    <section class="content_wrap">
-      <h1 id="제어문">제어문</h1>
+      <article class="content-title">
+
+  <div class="content-hide">
+    <div class="content-title-box">
+      <div>
+        <h2>Python 제어문(for, while)</h2>
+        <span> 2018-08-26 </span>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="content">
+  <article class="document-wrap">
+  <h1 id="제어문">제어문</h1>
 <h2 id="반복문-for-while">반복문 (for, while)</h2>
 <p>시퀀스형 데이터를 순회할 때 사용된다.</p>
 
@@ -624,12 +626,18 @@
  <span class="mi">99</span><span class="p">]</span>
 </code></pre></div></div>
 
+  </article>
 
-    </section>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".content-title").css("background-image", "url('')");
+  });
+</script>
+
 
   </section>
-  <!-- content end -->
-
 </body>
 
 </html>

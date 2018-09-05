@@ -1,8 +1,19 @@
+
+<section class="content">
+<h2 class="page-title">Content List</h2>
+
 {% for post in site.posts %}
-<a class="post_wrap" href="{{post.url}}">
-  <div>
-    <h4 class="post_title">{{ post.title }}</h4>
-    <p class="post_description">{{ post.content | strip_html | truncate: 60 }}</p>
+<a href="{{ post.url }}" class="post-wrap">
+  <div class="post-hover01 ani"></div>
+  <div class="post-hover02 ani"></div>
+
+  <div class="post-date">
+    <span>{{ post.date | date: " %Y-%m-%d "}}</span>
+  </div>
+  <div class="post-text">
+    <h3 class="post-title">{{post.title}}</h3>
+    <p class="post-description">{{ post.content | strip_html | truncatewords: 8 }}</p>
   </div>
 </a>
 {% endfor %}
+</section>

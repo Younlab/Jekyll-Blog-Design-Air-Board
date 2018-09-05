@@ -1,4 +1,26 @@
 ---
 layout: default
 ---
-{{ content }}
+<article class="content-title">
+
+  <div class="content-hide">
+    <div class="content-title-box">
+      <div>
+        <h2>{{ page.title }}</h2>
+        <span>{{ page.date | date: " %Y-%m-%d " }}</span>
+      </div>
+    </div>
+  </div>
+</article>
+<section class="content">
+  <article class="document-wrap">
+  {{ content }}
+  </article>
+
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".content-title").css("background-image", "url('{{ page.image }}')");
+  });
+</script>
